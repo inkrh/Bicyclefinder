@@ -37,6 +37,7 @@ class NetworksController {
         } catch {
             print("Error decoding JSON: \(error)")
         }
+        //dummyNetworks is useful for previews, better to return nil and handle the error, but this is just a demo
         return dummyNetworks
     }
 }

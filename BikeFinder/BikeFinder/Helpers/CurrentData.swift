@@ -1,10 +1,4 @@
-//
-//  CurrentData.swift
-//  BikeFinder
-//
-//  Created by Robert Smith on 11/26/25.
-//
-
+//TODO: legacy code below was used for local handling put that back in at some point in my (or other people's) future
 import Foundation
 
 struct CurrentData

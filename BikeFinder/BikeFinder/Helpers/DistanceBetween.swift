@@ -1,10 +1,4 @@
-//
-//  DistanceBetween.swift
-//  BikeFinder
-//
-//  Created by Robert Smith on 11/26/25.
-//
-
+//TODO: put this feature back in, was previously used in Xamarin.forms version for initial zoom level and distance
 import Foundation
 
 struct Coordinates {

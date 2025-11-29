@@ -17,7 +17,7 @@ struct ContentView: View {
             List {
                 ForEach(networkData?.networks ?? dummyNetworks.networks, id: \.id) { result in
                     NavigationLink(destination: MapDisplayView(selectedNetwork: result)) {
-                        Text(result.location.city)
+                        Text(result.location.city).accessibilityHint(Text("Tap to view rental bikes in \(result.location.city) on map"))
                     }
                 }
             }

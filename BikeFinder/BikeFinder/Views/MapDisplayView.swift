@@ -23,7 +23,7 @@ struct MapDisplayView: View {
                    coordinate: location.coordinate,
                    content: {
                        NavigationLink(destination: MappinView(selectedPin:location)) {
-                           Image("MapPin")
+                           Image("MapPin").accessibilityHint(Text("Tap to view bike station at \(location.name) details."))
                        }
                       
                    }
@@ -35,15 +35,12 @@ struct MapDisplayView: View {
                 cityData = await controller.makeRequest(cityUrl: selectedNetwork.href)
             }
             HStack {
-                Button(action: {
-                    // Action to perform when the button is tapped
-                    print("Custom image button tapped!")
-                }) {
+                NavigationLink(destination: AboutView()) {
                     Image("HelpButton")
                         .resizable()
                         .frame(width: 50, height: 50)
-                        .aspectRatio(contentMode: .fit)
-                }
+                        .aspectRatio(contentMode: .fit)                }
+                .accessibility(label: Text("About this app."))
             }
         }
     }
