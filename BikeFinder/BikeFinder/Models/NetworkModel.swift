@@ -1,16 +1,13 @@
 import Foundation
-// MARK: - Welcome
 struct NetworksModel: Codable {
     let networks: [NetworkModel]
 }
 
-// MARK: - Network
 struct NetworkModel: Codable {
     let id, name, href: String
     let location: Location
 }
 
-// MARK: - Location
 struct Location: Codable {
     let latitude, longitude: Double
     let city, country: String

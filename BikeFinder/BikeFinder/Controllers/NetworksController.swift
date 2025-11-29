@@ -1,6 +1,10 @@
 import Foundation
 import SwiftyJSON
 
+//TODO: error handling
+//TODO: sorting
+//TODO: filtering by country/city
+
 class NetworksController {
     func makeRequest() async -> NetworksModel {
         var networkData: NetworksModel

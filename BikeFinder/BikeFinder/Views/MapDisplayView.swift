@@ -2,6 +2,8 @@ import SwiftUI
 import MapKit
 import SwiftyJSON
 
+//TODO: pin clustering
+
 struct MapDisplayView: View {
     let selectedNetwork: NetworkModel
     @State var cityData: CitiesModel?
@@ -22,7 +24,7 @@ struct MapDisplayView: View {
                 MapAnnotation(
                    coordinate: location.coordinate,
                    content: {
-                       NavigationLink(destination: MappinView(selectedPin:location)) {
+                       NavigationLink(destination: MappinView(selectedPin:location, cityName: selectedNetwork.location.city)) {
                            Image("MapPin").accessibilityHint(Text("Tap to view bike station at \(location.name) details."))
                        }
                       

@@ -1,6 +1,10 @@
 import Foundation
 import SwiftyJSON
 
+
+//TODO: error handling
+//TODO: handling for cities with empty station info (remove? chase?)
+
 class CityController {
     func makeRequest(cityUrl: String) async -> CitiesModel {
         var cityData: CitiesModel
@@ -10,6 +14,7 @@ class CityController {
             do {
                 let (data, _) = try await URLSession.shared.data(from: url)
                 let json = JSON(data)
+                print(json)
                 return await decodeReseult(json)
                 
             }
