@@ -3,7 +3,7 @@ import SwiftyJSON
 
 
 //TODO: error handling
-//TODO: handling for cities with empty station info (remove? chase?)
+//TODO: handling for cities with empty station info (remove? chase?) problem comes from legacy networks(?) or API key(?), station data isn't shown until fetched, cannot fetch all and then filter, possibly combine cities at network stage?
 
 class CityController {
     func makeRequest(cityUrl: String) async -> CitiesModel {
