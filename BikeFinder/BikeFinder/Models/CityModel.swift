@@ -13,7 +13,7 @@ struct Station: Codable, Identifiable {
     let id, name: String
     let latitude, longitude: Double
     let timestamp: String
-    let freeBikes, emptySlots: Int
+    let freeBikes, emptySlots: Int?
 
     enum CodingKeys: String, CodingKey {
         case id, name, latitude, longitude, timestamp
