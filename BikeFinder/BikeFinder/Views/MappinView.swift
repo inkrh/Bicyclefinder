@@ -12,9 +12,9 @@ struct MappinView: View {
             Text("\(cityName) \(Constants.bikeStation)").font(Font.title).padding(24)
             Text("Station: \(selectedPin.name)").font(Font.body).padding(12)
             Text("Need to park a bike?").font(Font.title2)
-            Text("Empty Slots: \(selectedPin.emptySlots)").font(Font.body).padding(12)
+            Text("Empty Slots: \(selectedPin.emptySlots ?? 0)").font(Font.body).padding(12)
             Text("Need to rent a bike?").font(Font.title2)
-            Text("Free Bikes: \(selectedPin.freeBikes)").font(Font.body).padding(12)
+            Text("Free Bikes: \(selectedPin.freeBikes ?? 0)").font(Font.body).padding(12)
         }
         HStack {
             Button {
